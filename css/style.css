@@ -12,9 +12,11 @@
 10.footer section
 ======================*/
 /*======Global css start======*/
-body{
+*{
 	margin:0;
 	padding: 0;
+}
+body{
 	font-family: 'Cardo', serif;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Raleway', sans-serif;
@@ -58,6 +60,7 @@ header .logo{
 .menu ul{
 	float:right;
 	margin:14px 0 10px;
+	overflow: hidden;
 }
 .menu ul li{
 	list-style:none;
@@ -82,17 +85,6 @@ header .logo{
 	width: 80%;
 	margin: 10px auto 0;
 	border-bottom: 1px solid #4d5066;
-}
-.res_option {
-	position: absolute;
-	right: 25px;
-	top: 20px;
-}
-.res_option button{
-	background-color: transparent;
-	border:0;
-	color: #fff;
-	font-size: 25px;
 }
 /*======b_content section start======*/
 .b_content{
@@ -201,9 +193,6 @@ header .logo{
 .work_project{
 	overflow: hidden;
 }
-.work_project h2{
-	display: none;
-}
 .project_container{
 	width: 25%;
 	float: left;
@@ -281,9 +270,6 @@ header .logo{
 	font-family: 'Raleway', sans-serif;
 	margin:100px auto;
 }
-.portfolio h2{
-	display: none;
-}
 .portfolio .wrapper{
 	overflow: hidden;
 }
@@ -353,21 +339,18 @@ header .logo{
 	background-color: #53354a;
 	overflow: hidden;
 }
-.client h2{
-	display: none;
-}
 .client_profile{
 	width: 100%;
 	overflow: hidden;
 	float: left;
 }
-.client_profile:nth-child(2){
+.client_profile:first-child {
 	animation-name: slider_1;
 	animation-duration: 10s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
-.client_profile:nth-child(3){
+.client_profile:nth-child(2) {
 	position: absolute;
 	transform: translateX(-100%);
 	animation-name: slider_2;
@@ -375,7 +358,7 @@ header .logo{
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
-.client_profile:nth-child(4){
+.client_profile:last-child {
 	position: absolute;
 	transform: translateX(-200%);
 	animation-name: slider_3;
@@ -397,7 +380,6 @@ header .logo{
 }
 .client-comments p{
 	font-family: 'Cardo', serif;
-	font-weight: ;
 	font-size:20px;
 	font-style: italic;
 	color:#e8e4e7;
@@ -546,8 +528,130 @@ footer p span:last-child{
 	color: #fff;
 }
 /*======footer section end======*/
-/*==========================*/
-/*==========================*/
+/*=============media query start=============*/
+@media only screen and (max-width: 576px) {
+	/*======banner section start======*/
+.wrapper{
+	margin:0 auto;
+	width: 100%;
+	overflow: hidden;
+}
+header .logo, .menu, .menu ul, .feature-container,.portfolio_container{
+	float: none;
+}
+header .logo{
+	width: 100%;
+	text-align: center;
+}
+.menu {
+	display: table;
+	margin: 0 auto;
+}
+.line{
+	width: 100%;
+	margin-top: 5px;
+}
+/*======b_content section start======*/
+.b_content{
+	margin: 40px 0;
+}
+.b_content h2{
+	font-size: 30px;
+}
+.b_content p{
+	font-size:16px;
+}
+
+/*======feature section start======*/
+.feature .wrapper{
+	margin: 30px;
+}
+.feature .feature-container{
+	width: 100%;
+}
+/*======feature section end======*/
+/*======work section start======*/
+.work_project{
+	overflow: hidden;
+}
+.project_container{
+	width: 50%;
+	float: left;
+} 
+.project_container:nth-child(-n+5) {
+	animation:none;
+}
+.project_container:nth-child(n+6) {
+	animation:none;
+}
+/*======work section end======*/
+/*======portfolio section start======*/
+.portfolio {
+	margin:70px auto;
+}
+.portfolio .wrapper{
+	overflow: none;
+}
+.portfolio_container{
+	width: 100%;
+	margin-bottom: 30px;
+	margin-right: 0;
+}
+.portfolio_container img:hover{
+	transform: none;
+}
+.portfolio_container h3, .portfolio_container h4, .portfolio_container p{
+	text-align: center;
+}
+.portfolio_container .icon{
+	margin:20px auto 0;
+	display: table;
+}
+/*======portfolio section end======*/
+/*======client section start======*/
+.client-comments{
+	padding: 5px 10px 0;
+}
+.client-comments p{
+	font-size:16px;
+}
+/*======client section end======*/
+/*======download section start======*/
+.download{
+	font-family: 'Raleway', sans-serif;
+	margin: 40px 0;
+}
+.download p{
+	font-size: 22px;
+}
+/*======download section end======*/
+/*======about section start======*/
+.about{
+	overflow: none;
+}
+.about .wrapper{
+	margin: 40px auto 20px;
+	display: flex;
+	flex-direction: column;
+}
+.location, .social-media, .about_activebbox{
+	width: 100%;
+	margin-bottom: 30px;
+	float: none;
+}
+.location{
+	order: 1;
+}
+.social-media{
+	order: 3;
+}
+.about_activebbox{
+	order: 2;
+	padding: 0 50px;
+}
+/*======about section end======*/
+}
+/*=============media query end=============*/
 
 
 
