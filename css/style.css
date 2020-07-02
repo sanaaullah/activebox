@@ -144,9 +144,6 @@ header .logo{
 /*======b_content section end======*/
 /*======banner section end======*/
 /*======feature section start======*/
-.feature{
-
-}
 .feature .wrapper{
 	margin-top:100px;
 	margin-bottom:100px;
@@ -564,7 +561,8 @@ header .logo{
 
 /*======feature section start======*/
 .feature .wrapper{
-	margin: 30px;
+	margin: 30px auto;
+	width:100%;
 }
 .feature .feature-container{
 	width: 100%;
@@ -602,6 +600,7 @@ header .logo{
 }
 .portfolio_container h3, .portfolio_container h4, .portfolio_container p{
 	text-align: center;
+	padding: 0 10px;
 }
 .portfolio_container .icon{
 	margin:20px auto 0;
@@ -609,11 +608,8 @@ header .logo{
 }
 /*======portfolio section end======*/
 /*======client section start======*/
-.client-comments{
-	padding: 5px 10px 0;
-}
-.client-comments p{
-	font-size:16px;
+.client{
+	display: none;
 }
 /*======client section end======*/
 /*======download section start======*/
@@ -640,13 +636,13 @@ header .logo{
 	float: none;
 }
 .location{
-	order: 1;
+	order: 2;
 }
 .social-media{
 	order: 3;
 }
 .about_activebbox{
-	order: 2;
+	order: 1;
 	padding: 0 50px;
 }
 /*======about section end======*/
